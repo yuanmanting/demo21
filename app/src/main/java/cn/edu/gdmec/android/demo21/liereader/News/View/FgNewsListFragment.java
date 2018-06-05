@@ -61,6 +61,7 @@ public class FgNewsListFragment extends Fragment implements INewsView {
         presenter.loadNews(type, 0);
     }
 
+
     @Override
     public void showNews(final NewBean newsBean) {
         switch (type) {
