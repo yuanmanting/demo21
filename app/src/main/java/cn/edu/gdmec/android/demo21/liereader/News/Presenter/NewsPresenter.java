@@ -31,7 +31,7 @@ public class NewsPresenter implements INewsPresenter,IOnLoadListener{
             case FgNewsFragment.NEWS_TYPE_NBA:
                 iNewsModel.loadNews("list",startPage,Api.NBA_ID,this);
                 break;
-                case FgNewsFragment.NEWS_TYPE_JOKES:
+            case FgNewsFragment.NEWS_TYPE_JOKES:
                     iNewsModel.loadNews("list",startPage,Api.JOKE_ID,this);
                     break;
 

@@ -1,5 +1,7 @@
 package cn.edu.gdmec.android.demo21.liereader.News.Model;
 
+import android.util.Log;
+
 import cn.edu.gdmec.android.demo21.liereader.Bean.NewBean;
 import cn.edu.gdmec.android.demo21.liereader.Http.Api;
 import cn.edu.gdmec.android.demo21.liereader.Http.RetrofitHelper;
@@ -21,6 +23,7 @@ public class NewsModel implements INewsModel{
         retrofitHelper.getNews(hostType,id,startPage).enqueue(new Callback<NewBean>() {
             @Override
             public void onResponse(Call<NewBean> call, Response<NewBean> response) {
+                Log.i("onResponse", "onResponse: "+response.body());
                 if (response.isSuccessful()){
                     iOnLoadListener.success(response.body());
                 }else {
